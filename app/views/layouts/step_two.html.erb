@@ -1,0 +1,15 @@
+<h1>Convert <%= @currency %></h1>
+
+<div>Go <a href="/forex">back</a>.</div>
+
+<ul>
+  <% @currencies.each do |print| %>
+  <li>
+    <a href="/forex/<%= @currency %>/<%= print %>">
+      Convert 1 <%=@currency%> to <%= print %>...
+    </a>
+  </li>
+  <% end %>
+</ul>
+
+<div><%= @currencies %></div>

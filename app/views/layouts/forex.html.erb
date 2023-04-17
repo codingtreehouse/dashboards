@@ -1,5 +1,15 @@
-<h1>Convert <%= @start_currency%> to <%= @end_currency%></h1>
+<h1>Currency pairs</h1>
 
-<div>1 <%= @start_currency%> equals <%= @fx_rate %> <%= @end_currency %>.</div> 
-<br>
-<div>Go <a href="/forex">back</a>.</div>
+<div>Go <a href="/">back</a>.</div>
+
+<ul>
+  <% @currencies.each do |print| %>
+  <li>
+    <a href="/forex/<%= print %>">
+      Convert 1 <%= print %> to...
+    </a>
+  </li>
+  <% end %>
+</ul>
+
+<div><%= @currencies %></div>
